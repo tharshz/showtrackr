@@ -1,0 +1,50 @@
+.logInArea{
+  width:300px;
+  height:490px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10%;
+  box-shadow: 0 0 10px #666699;
+}
+.logInTitle{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+}
+.logInGroup{
+  width:95%;
+  padding-left: 5%;
+}
+.logInGroupPre{
+  background-color: #ffffff;
+  border-right: none;
+}
+.logInInput{
+  border-left: none;
+}
+.logInSubmitBtn{
+  width:90%;
+  margin-left: 5%;
+  border-radius: 0;
+}
+.logInBody2{
+  padding-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.socialBtn{
+  margin-top:10px;
+  width:90%;
+  border-radius: 0;
+  
+}
+
+.signUpArea{
+  width:300px;
+  min-height:400px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10%;
+  box-shadow: 0 0 10px #666699;
+}

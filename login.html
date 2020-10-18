@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Show Trackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript">
+    var objPeople = [
+      {
+        username: "Tharshz",
+        password: "77777"
+      },
+      {
+        username: "Bokkan",
+        password: "55555"
+      },
+      {
+        username: "Anoz",
+        password: "77777"
+      },
+      {
+        username: "Tharshi",
+        password: "11111"
+      },
+      {
+        username: "Raji",
+        password: "99999"
+      }
+
+    ]
+
+    function getInformation() {
+      var username = document.getElementById('username').value
+      var password = document.getElementById('password').value
+
+      for (var i = 0; i < objPeople.length; i++) {
+
+        if (username == objPeople[i].username && password == objPeople[i].password) {
+          alert(username + " " + "Login Successful")
+          window.open('index.html')
+          return
+        }
+        else {
+          alert("Login unSuccessful")
+          return
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><i class="fa fa-film"></i> Show<b>Trackr</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="add.html">Add</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item Active">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="logInArea">
+    <div class="logInTitle">
+      <p class="font-weight-bolder">Log in</p>
+    </div>
+    <form id="logInFormValidate">
+      <div class="input-group mb-3 logInGroup">
+        <div class="input-group-prepend logInGroupPre">
+          <span class="input-group-text logInGroupPre">@</span>
+        </div>
+        <input type="email" class="form-control logInInput" id="logInEmail" placeholder="Email">
+      </div>
+      <div class="input-group mb-3 logInGroup">
+        <div class="input-group-prepend logInGroupPre">
+          <span class="input-group-text logInGroupPre">🔑</span>
+        </div>
+        <input type="password" id="logInPassword" class="form-control logInInput" placeholder="Password">
+      </div>
+      <input type="submit" class="btn btn-success logInSubmitBtn" value="Log in">
+    </form>
+    <div class="text-center logInBody2">
+      <p>
+        <a><b>Forgot your password?</b></a><br>
+        <span class="text-secondary">Don't have an account yet? </span>
+        <b><a href="signup.html" style="color:#000;">Sign up</a></b>
+      </p>
+      <div style="margin-left:auto; margin-right:auto; margin-top:-10px;">
+        <div style="float:left; width:40%; margin-left:5%;">
+          <hr />
+        </div>
+        <div style="float:right; width:40%; margin-right:5%;">
+          <hr />
+        </div>
+        <div style="padding-top:5px;"><b>or</b></div>
+      </div>
+      <button type="button" class="btn btn-primary socialBtn">
+        <i class="fa">&#xf09a;</i>
+        <b>Sign in with Facebook</b>
+      </button><br>
+      <button type="button" class="btn btn-danger socialBtn">
+        <i class="fa">&#xf0d5;</i>
+        <b>Sign in with Google</b>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="card bg-light sigformcon">
+    <article class="card-body mx-auto formbg" style="width: 320px;background-color:#fff">
+      <h4 class="card-title mt-3 text-center"><b>Log in</b></h4>
+
+      <form>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-at"></i> </span>
+          </div>
+          <input id="username" name="email" class="form-control" placeholder="Email address" type="email" required>
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-key"></i> </span>
+          </div>
+          <input id="password" name="password" class="form-control" placeholder="Enter password" type="password" required>
+        </div> 
+        <div>
+          <button type="submit" onclick="getInformation()" name="button" id="login">Login</button>
+        <p class="message pt-4 text-danger"></p>
+        <p id="forgot"> <a href="#">Forgot your password?</a> </p>
+        <p> Don't have an account yet? <a href="signup.html">Sign up</a> </p>
+        <div class="or-seperator"><i>or</i></div>
+        <button type="submit" name="button" id="face" class="fa fa-facebook"> <span>Sign in with
+            Facebook</span></button>
+        <button type="submit" name="button" id="google" class="fa fa-google-plus"> <span> Sign in with Google
+          </span></button> 
+        </div>
+      </form> -->
+
+
+
+  <!-- <div class="row main">
+
+    <div class="main-login main-center main-box">
+      <h1>Login</h1>
+      <form class="form-horizontal" method="post" action="#">
+        <div class="form-group">
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon" id="icon"><i class="fa fa-at" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="email" id="username" placeholder="Email" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon" id="icon"><i class="fa fa-key" aria-hidden="true"></i></span>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+            </div>
+          </div>
+        </div>
+        <button type="submit" onclick="getInformation()" name="button" id="login">Login</button>
+        <p class="message pt-4 text-danger"></p>
+        <p id="forgot"> <a href="#">Forgot your password?</a> </p>
+        <p> Don't have an account yet? <a href="signup.html">Sign up</a> </p>
+        <div class="or-seperator"><i>or</i></div>
+        <button type="submit" name="button" id="face" class="fa fa-facebook"> <span>Sign in with
+            Facebook</span></button>
+        <button type="submit" name="button" id="google" class="fa fa-google-plus"> <span> Sign in with Google
+          </span></button>
+      </form>
+
+    </div>
+  </div> -->
+
+</body>
+
+</html>
